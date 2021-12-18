@@ -1,13 +1,15 @@
 package com.example.demo;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
+@Controller
 public class TextController {
 
-    @GetMapping("/")
-    public String test(){
-        return "TEST";
+    @ResponseBody
+    @GetMapping("/test")
+    public String test2() {
+        return "index";
     }
 }
